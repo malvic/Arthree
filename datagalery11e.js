@@ -17,9 +17,4 @@ Saksikan perjalanan kami!`
     setelah upacara bendera di lapangan outdoor MAN 1 Kota Malang`
   },
   
-  {
-    "image": "https://picsum.photos/id/1025/1200/600",
-    "title": "Anjing Lucu",
-    "desc": "Foto ketiga menampilkan seekor anjing yang sedang bersantai di selimut hangat."
-  }
 ];
