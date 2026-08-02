@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="csstrain11E (1).css"/>
+  <title>train11E</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+        <a href="#">
+            <span class="logo-text">XI-E</span>
+        </a>
+    </div>
+
+    <!-- Menu Laptop/Desktop -->
+    <ul class="navbar-menu desktop-menu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#piket">Piket</a></li>
+        <li><a href="#section-4">Our Journey</a></li>
+    </ul>
+
+    <!-- Menu Hamburger untuk HP -->
+    <details class="mobile-menu-wrapper">
+        <summary class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </summary>
+        <ul class="mobile-dropdown">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#piket">Piket</a></li>
+            <li><a href="#section-4">Our Journey</a></li>
+        </ul>
+    </details>
+  </nav>
+  
+    <!-- Section 1: Hero / Sampul Brosur -->
+  <section class="section-hero" id="beranda">
+      <div class="hero-bg">
+          <!-- Tambahkan tag gambar khusus untuk HP di sini -->
+          <img src="logo11e.jpeg" alt="Foto Kelas XI-E" class="hero-mobile-img">
+
+  </section>
+
+
+<!-- GABUNGAN SECTION 2 & 3 DALAM SATU WRAPPER -->
+<section class="section-main-group" id="tentang">
+  
+    <!-- Blok Konten Atas (Eks Section 2) -->
+    <div class="group-block block-about">
+        <!-- Layer Latar Belakang -->
+        <div class="about-bg">
+            <div class="bg-content">
+                <h2>Tentang Kelas Kami</h2>
+                <p class="subtitle">Mengenal lebih dekat keluarga besar kelas XI-E.</p>
+            </div>
+        </div>
+
+        <!-- Layer Card Utama (Tentang & Struktur Organisasi) -->
+        <div class="about-overlay-card">
+            <!-- Ringkasan / Kartu Informasi -->
+            <div class="about-grid">
+                <div class="card">
+                    <p>Siswa</p>
+                    <h3>33</h3>
+                </div>
+                <div class="card">
+                    <p>Kelas</p>
+                    <h3>XI-E</h3>
+                </div>
+                <div class="card">
+                    <p>Angkatan</p>
+                    <h3>50</h3>
+                </div>
+            </div>
+
+            <!-- Deskripsi Visi & Misi -->
+            <div class="about-text">
+                <h3>Visi & Misi</h3>
+                <p>
+                    Kami adalah kelas yang berkomitmen untuk saling mendukung dalam bidang akademik maupun non-akademik.
+                    Dengan semangat kebersamaan, kami terus belajar dan berkembang untuk mencapai prestasi terbaik.
+                </p>
+            </div>
+
+            <!-- Informasi Struktur Organisasi Kelas (Dengan Trigger Pop-up Modal) -->
+            <div class="structure-section">
+                <h3>Struktur Organisasi Kelas</h3>
+                <div class="structure-grid">
+    <!-- BARIS 1: WALI KELAS DI TENGAH -->
+    <div class="struct-card invisible-card"></div> <!-- Slot 1: Kosong Kiri -->
+
+    <div class="struct-card wali-kelas" onclick="openModal('Wali Kelas', 'Nama Guru, S.Pd.', 'NIP / NUPTK', 'Selalu mendukung dan membimbing siswa kelas XI-E menuju prestasi terbaik.', 'foto-wali-kelas.jpg')">
+        <span class="role">Wali Kelas</span>
+        <h4>Nama Guru, S.Pd.</h4>
+    </div>
+
+    <div class="struct-card invisible-card"></div> <!-- Slot 3: Kosong Kanan (TAMBAHKAN INI) -->
+
+
+    <!-- BARIS 2: PENGURUS UTAMA -->
+    <div class="struct-card" onclick="openModal('Ketua Kelas', 'Nama Ketua', 'XI-E / 01', 'Bertanggung jawab memimpin dan menjaga kekompakan teman-teman kelas XI-E.', 'foto-ketua.jpg')">
+        <span class="role">Ketua Kelas</span>
+        <h4>Nama Ketua</h4>
+    </div>
+
+    <div class="struct-card" onclick="openModal('Wakil Ketua Kelas', 'Nama Wakil', 'XI-E / 02', 'Membantu ketua kelas dalam mengkoordinasikan seluruh kegiatan kelas.', 'foto-wakil.jpg')">
+        <span class="role">Wakil Ketua Kelas</span>
+        <h4>Nama Wakil</h4>
+    </div>
+
+    <div class="struct-card" onclick="openModal('Sekretaris 1', 'Nama Sekretaris 1', 'XI-E / 03', 'Mencatat presensi, notulensi rapat, dan mengelola administrasi kelas.', 'foto-sekretaris1.jpg')">
+        <span class="role">Sekretaris 1</span>
+        <h4>Nama Sekretaris 1</h4>
+    </div>
+
+
+    <!-- BARIS 3: ANGGOTA LAINNYA -->
+    <div class="struct-card" onclick="openModal('Sekretaris 2', 'Nama Sekretaris 2', 'XI-E / 04', 'Membantu pengarsipan dokumen dan jadwal kegiatan.', 'foto-sekretaris2.jpg')">
+        <span class="role">Sekretaris 2</span>
+        <h4>Nama Sekretaris 2</h4>
+    </div>
+
+    <div class="struct-card" onclick="openModal('Bendahara 1', 'Nama Bendahara 1', 'XI-E / 05', 'Mengatur dan mencatat keuangan kas kelas.', 'foto-bendahara1.jpg')">
+        <span class="role">Bendahara 1</span>
+        <h4>Nama Bendahara 1</h4>
+    </div>
+
+    <div class="struct-card" onclick="openModal('Bendahara 2', 'Nama Bendahara 2', 'XI-E / 06', 'Membantu penagihan kas dan laporan keuangan.', 'foto-bendahara2.jpg')">
+        <span class="role">Bendahara 2</span>
+        <h4>Nama Bendahara 2</h4>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blok Konten Bawah (Eks Section 3) -->
+    <div class="group-block block-schedule" id="piket">
+        <div class="schedule-header">
+            <h2>Jadwal Piket Kelas</h2>
+            <p class="subtitle">Mari jaga kebersihan dan kenyamanan kelas 11E bersama.</p>
+        </div>
+
+        <div class="piket-grid">
+            <div class="piket-card">
+                <div class="piket-header">Senin</div>
+                <ul class="piket-list">
+                    <li>Nama Siswa 1</li>
+                    <li>Nama Siswa 2</li>
+                    <li>Nama Siswa 3</li>
+                    <li>Nama Siswa 4</li>
+                    <li>Nama Siswa 5</li>
+                </ul>
+            </div>
+
+            <div class="piket-card">
+                <div class="piket-header">Selasa</div>
+                <ul class="piket-list">
+                    <li>Nama Siswa 1</li>
+                    <li>Nama Siswa 2</li>
+                    <li>Nama Siswa 3</li>
+                    <li>Nama Siswa 4</li>
+                    <li>Nama Siswa 5</li>
+                </ul>
+            </div>
+
+            <div class="piket-card">
+                <div class="piket-header">Rabu</div>
+                <ul class="piket-list">
+                    <li>Nama Siswa 1</li>
+                    <li>Nama Siswa 2</li>
+                    <li>Nama Siswa 3</li>
+                    <li>Nama Siswa 4</li>
+                    <li>Nama Siswa 5</li>
+                </ul>
+            </div>
+
+            <div class="piket-card">
+                <div class="piket-header">Kamis</div>
+                <ul class="piket-list">
+                    <li>Nama Siswa 1</li>
+                    <li>Nama Siswa 2</li>
+                    <li>Nama Siswa 3</li>
+                    <li>Nama Siswa 4</li>
+                    <li>Nama Siswa 5</li>
+                </ul>
+            </div>
+
+            <div class="piket-card">
+                <div class="piket-header">Jumat</div>
+                <ul class="piket-list">
+                    <li>Nama Siswa 1</li>
+                    <li>Nama Siswa 2</li>
+                    <li>Nama Siswa 3</li>
+                    <li>Nama Siswa 4</li>
+                    <li>Nama Siswa 5</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--Our Journey Section-->
+<section id="section-4">
+    <!-- Gambar Galeri Utama -->
+    <img id="galleryImg" src="" alt="Foto Galeri">
+
+    <!-- Tombol Panah -->
+    <button class="arrow-btn arrow-left" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow-btn arrow-right" onclick="nextSlide()">&#10095;</button>
+
+    <!-- TAMBAHAN BARU: Container Titik Indikator -->
+    <div class="gallery-dots" id="galleryDots"></div>
+
+    <!-- Info Judul dan Deskripsi Melayang -->
+    <div class="info-container" id="infoContainer">
+      <div class="photo-title" onclick="toggleDesc()" id="photoTitle">
+        Judul Foto
+      </div>
+      <div class="photo-desc" id="photoDesc">
+        Deskripsi foto akan muncul di sini...
+      </div>
+    </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+      <a href="https://instagram.com/username_kelas_kamu" target="_blank" class="footer-ig-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          <span>@username_kelas_kamu</span>
+      </a>
+  </footer>
+
+<!-- MODAL POP-UP DETAIL STRUKTUR ORGANISASI -->
+<div class="modal-overlay" id="memberModal" onclick="closeModalOutside(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-body">
+      <div class="modal-avatar">
+        <img id="modalImg" src="" alt="Foto Anggota">
+      </div>
+      <div>
+        <span class="modal-role" id="modalRole">JABATAN</span>
+        <h3 class="modal-name" id="modalName">Nama Lengkap</h3>
+        <p class="modal-sub" id="modalSub">NIP / NISN</p>
+      </div>
+      <p class="modal-desc" id="modalDesc">
+        Deskripsi tugas atau kata-kata bijak...
+      </p>
+    </div>
+  </div>
+</div>
+
+  <!-- Panggil data dulu -->
+    <script src="datagalery11e.js"></script>
+    <!-- Baru panggil logika JavaScript utama -->
+    <script src="11ewebjs.js"></script>
+</body>
+</html>
