@@ -52,15 +52,22 @@ document.addEventListener("keydown", function(event) {
 // ==========================================
 function renderStructureCards() {
   const container = document.querySelector(".structure-grid");
-  if (!container) return;
+  if (!container || typeof dataPengurus === 'undefined') return;
 
   container.innerHTML = ""; // Bersihkan konten lama di HTML
 
   dataPengurus.forEach(item => {
-    // Berikan class khusus jika dia Wali Kelas
+    // 1. Jika kartu bertipe invisible (kartu kosong penyeimbang)
+    if (item.isInvisible) {
+      const invisibleCardHTML = `<div class="struct-card invisible-card"></div>`;
+      container.innerHTML += invisibleCardHTML;
+      return;
+    }
+
+    // 2. Berikan class khusus jika dia Wali Kelas
     const extraClass = item.isWaliKelas ? " wali-kelas" : "";
 
-    // Buat elemen HTML kartu
+    // 3. Buat elemen HTML kartu biasa
     const cardHTML = `
       <div class="struct-card${extraClass}" onclick="openModal('${item.role}', '${item.name}', '${item.sub}', '${item.desc}', '${item.img}')">
         <span class="role">${item.role}</span>
