@@ -1,6 +1,7 @@
 const dataPengurus = [
   // BARIS 1: [Kosong] - [Wali Kelas] - [Kosong]
-  { isInvisible: true },
+// TULIS SEPERTI INI:
+  { isInvisible: true }, 
   {
     role: "WALI KELAS",
     name: "Zakiah Alif Syakura.Spd",
