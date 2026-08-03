@@ -1,7 +1,6 @@
-// ==========================================
-// DATA STRUKTUR ORGANISASI KELAS XI-E
-// ==========================================
 const dataPengurus = [
+  // BARIS 1: [Kosong] - [Wali Kelas] - [Kosong]
+  { isInvisible: true },
   {
     role: "WALI KELAS",
     name: "Zakiah Alif Syakura.Spd",
@@ -10,6 +9,9 @@ const dataPengurus = [
     img: "fotbarkelas11e.jpeg",
     isWaliKelas: true
   },
+  { isInvisible: true },
+
+  // BARIS 2 & SETERUSNYA (Tersusun otomatis 3 kolom)
   {
     role: "KETUA KELAS",
     name: "Kenzorro Deviano Balva Ariono",
@@ -53,7 +55,6 @@ const dataPengurus = [
     img: "logo11e.jpeg"
   }
 ];
-
 
 const galleryData = [
   {
