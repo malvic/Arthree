@@ -1,3 +1,46 @@
+// ==========================================
+// DATA STRUKTUR ORGANISASI KELAS XI-E
+// ==========================================
+const dataPengurus = [
+  {
+    role: "WALI KELAS",
+    name: "Nama Guru, S.Pd",
+    sub: "NIP. 1985xxxx xxxx x xxx",
+    desc: "Membimbing, mendampingi, dan mengayomi seluruh siswa-siswi kelas XI-E.",
+    img: "fotbarkelas11e.jpeg", // Nama file foto kamu
+    isWaliKelas: true // Penanda khusus agar ukurannya lebih luas (opsional)
+  },
+  {
+    role: "KETUA KELAS",
+    name: "Nama Ketua Kamu",
+    sub: "NISN. 006xxxxxxx",
+    desc: "Bertanggung jawab atas ketertiban dan kepemimpinan di dalam kelas XI-E.",
+    img: "logo11e.jpeg"
+  },
+  {
+    role: "WAKIL KETUA",
+    name: "Nama Wakil Kamu",
+    sub: "NISN. 006xxxxxxx",
+    desc: "Membantu tugas ketua kelas dalam mengelola dan mengordinasi kegiatan kelas.",
+    img: "logo11e.jpeg"
+  },
+  {
+    role: "BENDAHARA",
+    name: "Nama Bendahara",
+    sub: "NISN. 006xxxxxxx",
+    desc: "Mengelola keuangan dan kas kelas XI-E secara transparan.",
+    img: "logo11e.jpeg"
+  },
+  {
+    role: "SEKRETARIS",
+    name: "Nama Sekretaris",
+    sub: "NISN. 006xxxxxxx",
+    desc: "Mencatat absensi, jadwal, dan dokumentasi administrasi kelas.",
+    img: "logo11e.jpeg"
+  }
+];
+
+
 const galleryData = [
   {
     "image": "Fotbarkelas11e.jpeg",
