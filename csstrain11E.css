@@ -230,15 +230,22 @@ section {
     pointer-events: none; /* Tidak bisa diklik atau di-hover */
 }
 
-/* Wali Kelas otomatis berada di kolom tengah baris pertama */
-.struct-card.wali-kelas {
-    grid-column: 2; 
-}
-
 /* Penyesuaian khusus tampilan HP (agar tidak error) */
+/* 🔄 GANTI BAGIAN MEDIA QUERY INI */
 @media screen and (max-width: 768px) {
+  .structure-grid {
+    grid-template-columns: repeat(2, 1fr); /* Otomatis 2 kolom di HP */
+    gap: 10px;
+  }
+
+  /* Sembunyikan kartu transparan saat di HP agar tidak menyisakan ruang kosong */
+  .invisible-card {
+    display: none !important;
+  }
+
+  /* Wali kelas memakan 2 kolom penuh di baris atas HP */
   .struct-card.wali-kelas {
-    grid-column: 1 / -1; /* Di HP memenuhi 2 kolom penuh */
+    grid-column: 1 / -1;
   }
 }
 
