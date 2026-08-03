@@ -54,22 +54,20 @@ function renderStructureCards() {
   const container = document.querySelector(".structure-grid");
   if (!container || typeof dataPengurus === 'undefined') return;
 
-  container.innerHTML = ""; // Bersihkan konten lama di HTML
+  container.innerHTML = "";
 
   dataPengurus.forEach(item => {
-    // 1. Jika kartu bertipe invisible (kartu kosong penyeimbang)
-    if (item.isInvisible) {
+    // Cek jika item adalah invisible ATAU tidak memiliki nama/role
+    if (item.isInvisible || !item.name) {
       const invisibleCardHTML = `<div class="struct-card invisible-card"></div>`;
       container.innerHTML += invisibleCardHTML;
-      return;
+      return; // Stop di sini, jangan cetak nama/role!
     }
 
-    // 2. Berikan class khusus jika dia Wali Kelas
+    // Jika kartu biasa:
     const extraClass = item.isWaliKelas ? " wali-kelas" : "";
-
-    // 3. Buat elemen HTML kartu biasa
     const cardHTML = `
-      <div class="struct-card${extraClass}" onclick="openModal('${item.role}', '${item.name}', '${item.sub}', '${item.desc}', '${item.img}')">
+      <div class="struct-card${extraClass}" onclick="openModal('${item.role}', '${item.name}', '${item.sub || ''}', '${item.desc || ''}', '${item.img || ''}')">
         <span class="role">${item.role}</span>
         <h4>${item.name}</h4>
       </div>
