@@ -47,6 +47,35 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
+// ==========================================
+// LOGIKA RENDER KARTU STRUKTUR ORGANISASI
+// ==========================================
+function renderStructureCards() {
+  const container = document.querySelector(".structure-grid");
+  if (!container) return;
+
+  container.innerHTML = ""; // Bersihkan konten lama di HTML
+
+  dataPengurus.forEach(item => {
+    // Berikan class khusus jika dia Wali Kelas
+    const extraClass = item.isWaliKelas ? " wali-kelas" : "";
+
+    // Buat elemen HTML kartu
+    const cardHTML = `
+      <div class="struct-card${extraClass}" onclick="openModal('${item.role}', '${item.name}', '${item.sub}', '${item.desc}', '${item.img}')">
+        <span class="role">${item.role}</span>
+        <h4>${item.name}</h4>
+      </div>
+    `;
+
+    container.innerHTML += cardHTML;
+  });
+}
+
+// Jalankan fungsi render saat halaman web selesai dimuat
+document.addEventListener("DOMContentLoaded", function() {
+  renderStructureCards();
+});
 
 // *gallery function
 // Mengambil elemen HTML
