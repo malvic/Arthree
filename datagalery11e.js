@@ -29,14 +29,14 @@ const dataPengurus = [
   },
   {
     role: "SEKRETARIS 1",
-    name: "Falah Arrayi",
+    name: "Falah Arravi",
     sub: "Siswa XI-E",
     desc: "Mencatat absensi dan jurnal harian kelas.",
     img: "logo11e.jpeg"
   },
   {
     role: "SEKRETARIS 2",
-    name: "Nama Sekretaris 2",
+    name: "Sri Sadewo Pamungkas",
     sub: "Siswa XI-E",
     desc: "Membantu sekretaris utama mengurus administrasi kelas.",
     img: "logo11e.jpeg"
@@ -44,14 +44,14 @@ const dataPengurus = [
   {
     role: "BENDAHARA 1",
     name: "Shadreena Zahahya Medina Handriyo",
-    sub: "Siswa XI-E",
+    sub: "Siswi XI-E",
     desc: "Mengelola arus keuangan dan kas kelas.",
     img: "logo11e.jpeg"
   },
   {
     role: "BENDAHARA 2",
-    name: "Nama Bendahara 2",
-    sub: "Siswa XI-E",
+    name: "Janitra Ratmayana Putri",
+    sub: "Siswi XI-E",
     desc: "Membantu pengumpulan kas harian kelas.",
     img: "logo11e.jpeg"
   }
