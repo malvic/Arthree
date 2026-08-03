@@ -230,8 +230,16 @@ section {
     pointer-events: none; /* Tidak bisa diklik atau di-hover */
 }
 
+/* Wali Kelas otomatis berada di kolom tengah baris pertama */
 .struct-card.wali-kelas {
-    width: 100%;
+    grid-column: 2; 
+}
+
+/* Penyesuaian khusus tampilan HP (agar tidak error) */
+@media screen and (max-width: 768px) {
+  .struct-card.wali-kelas {
+    grid-column: 1 / -1; /* Di HP memenuhi 2 kolom penuh */
+  }
 }
 
 .struct-card .role {
