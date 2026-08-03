@@ -224,10 +224,13 @@ section {
     border-color: #3b82f6;
 }
 
-/* KARTU INVISIBLE (Menghilangkan wujud, background, border, dan interaksi mouse) */
+/* KARTU INVISIBLE (Benar-benar transparan & tidak terlihat) */
 .invisible-card {
-    visibility: hidden; /* Elemen tetap mengambil ruang tempat, tapi tidak terlihat */
-    pointer-events: none; /* Tidak bisa diklik atau di-hover */
+    visibility: hidden !important; 
+    opacity: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    pointer-events: none !important; 
 }
 
 /* Penyesuaian khusus tampilan HP (agar tidak error) */
