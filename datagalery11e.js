@@ -4,38 +4,52 @@
 const dataPengurus = [
   {
     role: "WALI KELAS",
-    name: "Nama Guru, S.Pd",
-    sub: "NIP. 1985xxxx xxxx x xxx",
-    desc: "Membimbing, mendampingi, dan mengayomi seluruh siswa-siswi kelas XI-E.",
-    img: "fotbarkelas11e.jpeg", // Nama file foto kamu
-    isWaliKelas: true // Penanda khusus agar ukurannya lebih luas (opsional)
+    name: "Zakiah Alif Syakura.Spd",
+    sub: "Wali Kelas XI-E",
+    desc: "Membimbing dan mengayomi seluruh siswa kelas XI-E.",
+    img: "fotbarkelas11e.jpeg",
+    isWaliKelas: true
   },
   {
     role: "KETUA KELAS",
-    name: "Nama Ketua Kamu",
-    sub: "NISN. 006xxxxxxx",
-    desc: "Bertanggung jawab atas ketertiban dan kepemimpinan di dalam kelas XI-E.",
+    name: "Kenzorro Deviano Balva Ariono",
+    sub: "Siswa XI-E",
+    desc: "Memimpin dan bertanggung jawab atas kegiatan kelas.",
     img: "logo11e.jpeg"
   },
   {
-    role: "WAKIL KETUA",
-    name: "Nama Wakil Kamu",
-    sub: "NISN. 006xxxxxxx",
-    desc: "Membantu tugas ketua kelas dalam mengelola dan mengordinasi kegiatan kelas.",
+    role: "WAKIL KETUA KELAS",
+    name: "Azam kesna Andromeda",
+    sub: "Siswa XI-E",
+    desc: "Membantu tugas ketua kelas dalam mengelola kelas.",
     img: "logo11e.jpeg"
   },
   {
-    role: "BENDAHARA",
-    name: "Nama Bendahara",
-    sub: "NISN. 006xxxxxxx",
-    desc: "Mengelola keuangan dan kas kelas XI-E secara transparan.",
+    role: "SEKRETARIS 1",
+    name: "Falah Arrayi",
+    sub: "Siswa XI-E",
+    desc: "Mencatat absensi dan jurnal harian kelas.",
     img: "logo11e.jpeg"
   },
   {
-    role: "SEKRETARIS",
-    name: "Nama Sekretaris",
-    sub: "NISN. 006xxxxxxx",
-    desc: "Mencatat absensi, jadwal, dan dokumentasi administrasi kelas.",
+    role: "SEKRETARIS 2",
+    name: "Nama Sekretaris 2",
+    sub: "Siswa XI-E",
+    desc: "Membantu sekretaris utama mengurus administrasi kelas.",
+    img: "logo11e.jpeg"
+  },
+  {
+    role: "BENDAHARA 1",
+    name: "Shadreena Zahahya Medina Handriyo",
+    sub: "Siswa XI-E",
+    desc: "Mengelola arus keuangan dan kas kelas.",
+    img: "logo11e.jpeg"
+  },
+  {
+    role: "BENDAHARA 2",
+    name: "Nama Bendahara 2",
+    sub: "Siswa XI-E",
+    desc: "Membantu pengumpulan kas harian kelas.",
     img: "logo11e.jpeg"
   }
 ];
