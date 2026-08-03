@@ -33,7 +33,6 @@ body {
     z-index: 1000;
 }
 
-/* Atur isi di dalam link logo agar berjejer ke samping */
 .navbar-logo a {
     display: flex;
     align-items: center;
@@ -86,7 +85,6 @@ section {
     background-image: url('logo11e.jpeg'); 
     background-size: cover;
     background-position: center;
-    /* Ubah padding-top menjadi lebih besar agar kotak turun ke tengah */
     padding-top: 240px; 
 }
 
@@ -131,7 +129,6 @@ section {
     color: #94a3b8;
 }
 
-/* Kartu Overlay Utama */
 .about-overlay-card {
     background-color: #162872;
     border-radius: 32px 32px 0 0; 
@@ -224,32 +221,13 @@ section {
     border-color: #3b82f6;
 }
 
-/* KARTU INVISIBLE (Benar-benar transparan & tidak terlihat) */
+/* KARTU INVISIBLE (Benar-benar Hilang Tanpa Menyisakan Kotak/Teks) */
 .invisible-card {
     visibility: hidden !important; 
     opacity: 0 !important;
     border: none !important;
     background: transparent !important;
     pointer-events: none !important; 
-}
-
-/* Penyesuaian khusus tampilan HP (agar tidak error) */
-/* 🔄 GANTI BAGIAN MEDIA QUERY INI */
-@media screen and (max-width: 768px) {
-  .structure-grid {
-    grid-template-columns: repeat(2, 1fr); /* Otomatis 2 kolom di HP */
-    gap: 10px;
-  }
-
-  /* Sembunyikan kartu transparan saat di HP agar tidak menyisakan ruang kosong */
-  .invisible-card {
-    display: none !important;
-  }
-
-  /* Wali kelas memakan 2 kolom penuh di baris atas HP */
-  .struct-card.wali-kelas {
-    grid-column: 1 / -1;
-  }
 }
 
 .struct-card .role {
@@ -268,7 +246,7 @@ section {
     font-weight: 600;
 }
 
-/* --- Blok Bawah (Eks Section 3 - Piket) --- */
+/* --- Blok Bawah (Piket) --- */
 .block-schedule {
     width: 100%;
     background-color: #0f172a; 
@@ -468,12 +446,11 @@ section {
 }
 
 /* ==========================================
-   SECTION 4: GALERI / OUR JOURNEY (DESKTOP OPTIMIZED)
+   SECTION 4: GALERI / OUR JOURNEY
    ========================================== */
 #section-4 {
   position: relative;
   width: 100%;
-  /* Membuat tinggi section galeri hampir memenuhi 1 layar (85-90% dari tinggi browser) */
   height: 85vh; 
   min-height: 500px;
   background-color: #0f172a; 
@@ -483,8 +460,6 @@ section {
   overflow: hidden;
 }
 
-/* Styling Gambar Galeri */
-/* Cari selector #galleryImg kamu, lalu tambahkan baris transition di dalamnya */
 #galleryImg {
   width: auto;
   height: auto;
@@ -494,12 +469,9 @@ section {
   display: block;
   margin: auto;
   border-radius: 8px;
-
-  /* Tambahkan baris ini untuk efek transisi halus saat foto berganti */
   transition: opacity 0.3s ease-in-out; 
 }
 
-/* TOMBOL PANAH KIRI & KANAN */
 .arrow-btn {
   position: absolute;
   top: 50%;
@@ -527,7 +499,6 @@ section {
   right: 20px; 
 }
 
-/* CONTAINER INFO */
 .info-container {
   position: absolute;
   bottom: 0;
@@ -542,7 +513,6 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* JUDUL FOTO */
 .photo-title {
   font-size: 20px;
   font-weight: 600;
@@ -563,7 +533,6 @@ section {
   transform: rotate(180deg);
 }
 
-/* DESKRIPSI FOTO */
 .photo-desc {
   max-height: 0;
   overflow: hidden;
@@ -571,7 +540,6 @@ section {
   opacity: 0;
 }
 
-/* DESKRIPSI SAAT DIBUKA */
 .info-container.open .photo-desc {
   max-height: 160px; 
   margin-top: 12px;
@@ -581,18 +549,16 @@ section {
   line-height: 1.6;
   color: #e2e8f0;
 }
-/* ==========================================
-   INDIKATOR TITIK GALERI (DOTS INDICATOR)
-   ========================================== */
+
 .gallery-dots {
   position: absolute;
-  bottom: 65px; /* Posisinya melayang di atas baris info-container */
+  bottom: 65px; 
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
-  z-index: 6; /* Di atas gambar & di atas info-container */
+  z-index: 6; 
   background: rgba(15, 23, 42, 0.6);
   padding: 6px 14px;
   border-radius: 20px;
@@ -601,7 +567,6 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Bentuk awal titik (lingkaran transparan) */
 .dot {
   width: 8px;
   height: 8px;
@@ -615,15 +580,14 @@ section {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Bentuk titik saat aktif (lonjong pipih / pill shape) */
 .dot.active {
-  background-color: #3b82f6; /* Warna aksen biru terang */
+  background-color: #3b82f6; 
   width: 22px;
   border-radius: 10px;
 }
 
 /* ==========================================
-   LAPTOP / DESKTOP (Layar > 768px)
+   MEDIA QUERIES (DESKTOP & MOBILE)
    ========================================== */
 @media (min-width: 768px) {
     .structure-grid {
@@ -641,11 +605,12 @@ section {
     .piket-card:nth-child(5) {
         width: calc(33.333% - 14px);
     }
+
+    .hero-mobile-img {
+        display: none;
+    }
 }
 
-/* ==========================================
-   RESPONSIF HP (Layar < 768px)
-   ========================================== */
 @media (max-width: 768px) {
     .desktop-menu {
         display: none;
@@ -699,24 +664,19 @@ section {
         background-color: #f0f0f0;
         color: #162872;
     }
-}
 
-/* Khusus Layar HP (Lebar kurang dari 768px) */
-@media (max-width: 768px) {
     .hero-bg {
-        /* Matikan gambar background pada HP */
         background-image: none !important;
         min-height: auto;
         height: auto;
         position: relative;
-        padding-top: 55px; /* Sesuaikan dengan tinggi navbar */
-        background-color: #0f172a; /* Warna latar belakang jika ada sisa area */
+        padding-top: 55px; 
+        background-color: #0f172a; 
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Tampilkan gambar asli agar proporsinya 100% utuh tanpa terpotong */
     .hero-mobile-img {
         display: block;
         width: 100%;
@@ -724,84 +684,41 @@ section {
         object-fit: contain;
     }
 
-    /* Posisikan box ucapan di atas gambar (melayang) */
-    .hero-content {
-        position: absolute;
-        top: 65px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85%;
-        padding: 6px 10px;
-        z-index: 2;
+    /* Tampilan HP: Tetap 2 kolom dan sembunyikan kartu invisible agar tidak mengganggu layout */
+    .structure-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px;
     }
 
-    .hero-content h1 {
-        font-size: 16px;
-        margin-bottom: 2px;
+    .invisible-card {
+        display: none !important;
     }
 
-    .hero-content p {
-        font-size: 11px;
+    .struct-card.wali-kelas {
+        grid-column: span 2; 
+        margin-bottom: 6px;
     }
-}
 
-/* Sembunyikan gambar khusus HP di layar laptop/desktop */
-@media (min-width: 769px) {
-    .hero-mobile-img {
-        display: none;
+    .struct-card {
+        padding: 12px 8px;
     }
-}
 
+    .struct-card .role {
+        font-size: 10px;
+    }
 
-@media (max-width: 480px) {
+    .struct-card h4 {
+        font-size: 13px;
+    }
+
     .about-overlay-card {
         padding: 30px 16px 70px 16px;
         border-radius: 24px 24px 0 0;
-    }
-
-    .structure-grid {
-        grid-template-columns: repeat(2, 1fr); 
     }
     
     .piket-card {
         width: 100%; 
     }
-}
-
-/* ==========================================
-   TAMPILAN KHUSUS HP (MEDIA QUERY)
-   ========================================== */
-@media screen and (max-width: 768px) {
-  
-  /* 1. Ubah Grid jadi 2 Kolom atau 1 Kolom saja di HP */
-  .structure-grid {
-    grid-template-columns: repeat(2, 1fr); /* Bisa ganti 1fr jika ingin 1 kolom memanjang */
-    gap: 10px;
-  }
-
-  /* 2. SEMBUNYIKAN KARTU TRANSPARAN DI HP */
-  .invisible-card {
-    display: none !important; /* Dihapus sementara khusus tampilan HP */
-  }
-
-  /* 3. WALI KELAS MEMENUHI BARIS PERTAMA PENUH DI HP */
-  .struct-card.wali-kelas {
-    grid-column: 1 / -1; /* Memenuhi 2 kolom penuh di paling atas */
-    margin-bottom: 6px;
-  }
-
-  /* 4. Penyesuaian ukuran teks & padding agar pas di HP */
-  .struct-card {
-    padding: 12px 8px;
-  }
-
-  .struct-card .role {
-    font-size: 10px;
-  }
-
-  .struct-card h4 {
-    font-size: 13px;
-  }
 }
 
 /* ==========================================
@@ -830,7 +747,6 @@ section {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.05);
 }
-
 .footer-ig-link:hover {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.15);
