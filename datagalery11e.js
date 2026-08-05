@@ -32,7 +32,7 @@ const dataPengurus = [
     name: "Falah Arravi",
     sub: "Siswa XI-E",
     desc: "Mencatat absensi dan jurnal harian kelas.",
-    img: "logo11e.jpeg"
+    img: "serketaris1.jpeg"
   },
   {
     role: "SEKRETARIS 2",
